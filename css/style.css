@@ -16,14 +16,17 @@ body{
   height: 100vh;
   background: linear-gradient(135deg, #eeaeca, #94bbe9);
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .quote-box{
   background: rgb(255, 255,255, 0.61);
   width: 700px;
-  position: absolute;
+  /* position: absolute; */
   /* top: 25%; */
   left: 50%;
-  transform: translate(-50%,50%);
+  /* transform: translate(-50%,50%); */
   padding: 40px;
   border-radius: 10px;
   text-align: center;
@@ -90,12 +93,31 @@ body{
 } 
 
 
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 768px) {
+  .quote-box blockquote {
+    font-size: 23px;
+  }
+  .quote-box button {
+    width: 120px;
+    height: 45px;
+  }
+}
 
-
-
-
-
-
-
-
-
+ /* Media Query for Mobile Devices */
+ @media (max-width: 480px) {
+  .quote-box{
+    width: 90%;
+    padding: 20px;
+  }
+  .quote-box h2 {
+    font-size: 30px;
+  }
+  .quote-box blockquote {
+    font-size: 21px;
+  }
+  .quote-box button {
+    width: 115px;
+    height: 40px;
+  }
+}
